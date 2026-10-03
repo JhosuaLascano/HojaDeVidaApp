@@ -1,0 +1,30 @@
+name: cv_flutter_wrapper
+description: "Contenedor híbrido en Flutter que embebe la hoja de vida web (WebView)."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.10.0   # WebView oficial (flutter.dev)
+  url_launcher: ^6.3.1       # Abrir correo, teléfono y WhatsApp con apps nativas
+  share_plus: ^10.1.4        # Hoja de compartir nativa
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Opción A: la web vive dentro de la app (funciona sin internet).
+  # Cada subcarpeta debe declararse por separado.
+  assets:
+    - assets/web/
+    - assets/web/css/
+    - assets/web/js/
+    - assets/web/img/

@@ -1,0 +1,14 @@
+services:
+  android-build:
+    build: .
+    image: hojadevida-android
+    container_name: hojadevida-build
+    volumes:
+      - ./output:/output
+      - gradle-cache:/root/.gradle
+      # Guarda la clave de firma para poder actualizar la app ya instalada
+      - android-keys:/root/.android
+
+volumes:
+  gradle-cache:
+  android-keys:

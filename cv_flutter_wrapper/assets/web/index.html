@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Hoja de vida de Jhosua Lascano Villarreal – Recepción hotelera y conductor profesional.">
+  <meta name="theme-color" content="#0F1C2E">
+  <title>Jhosua Lascano · Hoja de Vida</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- ===== Encabezado ===== -->
+  <header class="hero" id="inicio">
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema claro/oscuro">
+      <span class="icon-sun">☀</span><span class="icon-moon">☾</span>
+    </button>
+    <img class="hero__photo" src="img/foto.jpg" alt="Foto de Jhosua Lascano Villarreal" width="132" height="132">
+    <p class="hero__eyebrow">Hoja de vida</p>
+    <h1 class="hero__name">Jhosua Lascano Villarreal</h1>
+    <p class="hero__role">Recepción Hotelera · Conductor Profesional</p>
+    <nav class="hero__nav" aria-label="Secciones">
+      <a href="#perfil">Perfil</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- ===== Datos personales ===== -->
+    <section class="card reveal" id="datos" aria-labelledby="t-datos">
+      <h2 class="card__title" id="t-datos"><span class="card__icon">👤</span>Datos personales</h2>
+      <dl class="data-grid">
+        <div><dt>Cédula</dt><dd>1726654419</dd></div>
+        <div><dt>Edad</dt><dd><span id="edad" data-nacimiento="2003-01-17">—</span> años</dd></div>
+        <div><dt>Nacimiento</dt><dd>17/01/2003 · Quito, Ecuador</dd></div>
+        <div><dt>Residencia</dt><dd>Tulcán, Carchi, Ecuador</dd></div>
+      </dl>
+    </section>
+
+    <!-- ===== Perfil profesional ===== -->
+    <section class="card reveal" id="perfil" aria-labelledby="t-perfil">
+      <h2 class="card__title" id="t-perfil"><span class="card__icon">✦</span>Perfil profesional</h2>
+      <p>Persona responsable, puntual y con vocación de servicio, con experiencia en recepción hotelera
+        en Lago Agrio (Sucumbíos). Habilidad para la atención al cliente, manejo de reservas y registro
+        de huéspedes. Bachiller en Ciencias, con licencia de conducir tipo C profesional y tarjeta militar.</p>
+    </section>
+
+    <!-- ===== Experiencia y formación (desplegables) ===== -->
+    <section class="card reveal" id="experiencia" aria-labelledby="t-exp">
+      <h2 class="card__title" id="t-exp"><span class="card__icon">💼</span>Experiencia y formación</h2>
+
+      <article class="accordion">
+        <button class="accordion__head" type="button" aria-expanded="true">
+          <span>
+            <strong>Recepcionista</strong>
+            <small>Hoteles de Lago Agrio, Sucumbíos</small>
+          </span>
+          <span class="accordion__chev" aria-hidden="true">⌄</span>
+        </button>
+        <div class="accordion__body">
+          <p>Atención y registro de huéspedes (check-in / check-out), gestión de reservas,
+            atención telefónica, cobros y coordinación con el personal del hotel.</p>
+        </div>
+      </article>
+
+      <article class="accordion">
+        <button class="accordion__head" type="button" aria-expanded="false">
+          <span>
+            <strong>Bachiller en Ciencias</strong>
+            <small>Unidad Educativa Particular Emanuel · Graduado: 26/07/2018</small>
+          </span>
+          <span class="accordion__chev" aria-hidden="true">⌄</span>
+        </button>
+        <div class="accordion__body">
+          <p>Refrendación Nro. ME-REF-05298096 · Ministerio de Educación del Ecuador.</p>
+        </div>
+      </article>
+
+      <article class="accordion">
+        <button class="accordion__head" type="button" aria-expanded="false">
+          <span>
+            <strong>Documentos habilitantes</strong>
+            <small>Licencias y certificados</small>
+          </span>
+          <span class="accordion__chev" aria-hidden="true">⌄</span>
+        </button>
+        <div class="accordion__body">
+          <ul class="check-list">
+            <li>Licencia de conducir tipo C (profesional)</li>
+            <li>Tarjeta militar</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== Habilidades (filtrables) ===== -->
+    <section class="card reveal" id="habilidades" aria-labelledby="t-hab">
+      <h2 class="card__title" id="t-hab"><span class="card__icon">⚙</span>Habilidades</h2>
+
+      <div class="filters" role="group" aria-label="Filtrar habilidades">
+        <button class="chip-filter is-active" type="button" data-filter="todas">Todas</button>
+        <button class="chip-filter" type="button" data-filter="tecnica">Técnicas</button>
+        <button class="chip-filter" type="button" data-filter="blanda">Blandas</button>
+      </div>
+      <input class="search" id="skillSearch" type="search" placeholder="Buscar habilidad…" aria-label="Buscar habilidad">
+
+      <ul class="skills" id="skills">
+        <li class="skill" data-tipo="tecnica">Atención al cliente</li>
+        <li class="skill" data-tipo="tecnica">Recepción hotelera</li>
+        <li class="skill" data-tipo="tecnica">Manejo de reservas</li>
+        <li class="skill" data-tipo="tecnica">Caja y cobros</li>
+        <li class="skill" data-tipo="tecnica">Conducción profesional</li>
+        <li class="skill" data-tipo="blanda">Trabajo en equipo</li>
+        <li class="skill" data-tipo="blanda">Puntualidad</li>
+        <li class="skill" data-tipo="blanda">Responsabilidad</li>
+      </ul>
+      <p class="empty" id="skillsEmpty" hidden>No hay habilidades que coincidan.</p>
+
+      <h3 class="subtitle">Idiomas</h3>
+      <div class="lang">
+        <div class="lang__row"><span>Español</span><span class="muted">Nativo</span></div>
+        <div class="lang__bar"><span class="lang__fill" style="--nivel: 100%"></span></div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="card reveal" id="contacto" aria-labelledby="t-con">
+      <h2 class="card__title" id="t-con"><span class="card__icon">✉</span>Contacto</h2>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:rogerlasxvilla@gmail.com">
+          <span class="contact-link__icon">✉</span>
+          <span><small>Correo</small>rogerlasxvilla@gmail.com</span>
+        </a>
+        <a class="contact-link" href="tel:+593960260813">
+          <span class="contact-link__icon">☎</span>
+          <span><small>Teléfono</small>0960260813</span>
+        </a>
+        <a class="contact-link" href="https://wa.me/593960260813" target="_blank" rel="noopener">
+          <span class="contact-link__icon">💬</span>
+          <span><small>WhatsApp</small>Enviar mensaje</span>
+        </a>
+      </div>
+
+      <form class="form" id="contactForm" novalidate>
+        <h3 class="subtitle">Escríbeme</h3>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name">
+          <span class="field__error" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="correo">Correo electrónico</label>
+          <input id="correo" name="correo" type="email" autocomplete="email">
+          <span class="field__error" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+          <span class="field__error" aria-live="polite"></span>
+        </div>
+        <button class="btn" type="submit">Enviar mensaje</button>
+        <p class="form__ok" id="formOk" role="status" hidden></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jhosua Lascano Villarreal · Hoja de vida web</p>
+    <a href="#inicio" class="footer__top">Volver arriba ↑</a>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
